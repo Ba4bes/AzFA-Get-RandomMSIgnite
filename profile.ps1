@@ -14,6 +14,7 @@
 if ($env:MSI_SECRET -and (Get-Module -ListAvailable Az.Accounts)) {
     Connect-AzAccount -Identity
 }
+$PSDefaultParameterValues = @{ '*:Encoding' = 'utf8' }
 
 # Uncomment the next line to enable legacy AzureRm alias in Azure PowerShell.
 # Enable-AzureRmAlias
